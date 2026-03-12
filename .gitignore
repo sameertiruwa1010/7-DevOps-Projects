@@ -1,0 +1,49 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Kubernetes secrets
+secrets.yaml
+*.secret.yaml
+
+# Docker
+*.tar
+docker-compose.override.yml
+
+# Node modules (if used)
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# Build files
+dist/
+build/
+*.out
+
+# Temporary files
+tmp/
+temp/
