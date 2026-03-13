@@ -2,7 +2,7 @@
 
 A production-ready full-stack task management application built with Node.js, React, MongoDB, Docker, and Kubernetes.
 
-## ✨ Features
+## ✨ Features:
 
 - **CRUD Tasks** — Create, read, update, delete with validation
 - **Priorities** — Low / Medium / High with visual indicators
