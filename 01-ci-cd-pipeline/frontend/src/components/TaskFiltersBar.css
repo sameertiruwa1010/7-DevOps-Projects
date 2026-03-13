@@ -1,0 +1,101 @@
+.filters-bar {
+  margin-bottom: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.filters-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* Search */
+.filter-search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 180px;
+}
+
+.filter-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.filter-search {
+  width: 100%;
+  padding: 8px 12px 8px 34px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  appearance: none;
+}
+
+.filter-search::placeholder { color: var(--text-muted); }
+.filter-search:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+  outline: none;
+}
+
+/* Chips */
+.filter-group {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.filter-chip {
+  padding: 5px 12px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-transform: capitalize;
+}
+
+.filter-chip:hover { border-color: var(--text-muted); color: var(--text-primary); }
+
+.filter-chip.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-chip-priority.priority-low.active   { background: var(--success-dim); border-color: var(--priority-low); color: var(--priority-low); }
+.filter-chip-priority.priority-medium.active { background: var(--warning-dim); border-color: var(--priority-medium); color: var(--priority-medium); }
+.filter-chip-priority.priority-high.active   { background: var(--danger-dim); border-color: var(--priority-high); color: var(--priority-high); }
+
+.filter-clear {
+  padding: 5px 12px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.filter-clear:hover { color: var(--danger); border-color: var(--danger); }
+
+.filter-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

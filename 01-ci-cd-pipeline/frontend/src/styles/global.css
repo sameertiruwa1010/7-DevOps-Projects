@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors */
+  --bg-base: #0f1117;
+  --bg-surface: #16181f;
+  --bg-elevated: #1c1f28;
+  --bg-hover: #222530;
+  --bg-active: #272b36;
+
+  --border: #2a2d38;
+  --border-subtle: #1f2230;
+  --border-focus: #4f6ef7;
+
+  --text-primary: #eceef4;
+  --text-secondary: #8b90a0;
+  --text-muted: #555a6e;
+  --text-inverse: #0f1117;
+
+  --accent: #4f6ef7;
+  --accent-hover: #6080ff;
+  --accent-dim: rgba(79, 110, 247, 0.15);
+  --accent-glow: rgba(79, 110, 247, 0.25);
+
+  --success: #34c77b;
+  --success-dim: rgba(52, 199, 123, 0.12);
+  --warning: #f5a524;
+  --warning-dim: rgba(245, 165, 36, 0.12);
+  --danger: #f0476a;
+  --danger-dim: rgba(240, 71, 106, 0.12);
+
+  --priority-low: #34c77b;
+  --priority-medium: #f5a524;
+  --priority-high: #f0476a;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+  --shadow-accent: 0 0 0 3px var(--accent-glow);
+
+  /* Transitions */
+  --transition: 150ms ease;
+  --transition-slow: 300ms ease;
+
+  /* Font */
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root { min-height: 100vh; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* Focus */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-accent);
+}
+
+/* Utility */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+}
