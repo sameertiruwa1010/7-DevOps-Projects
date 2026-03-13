@@ -1,9 +1,10 @@
 name: CI/CD Pipeline
 
-# Run when code is pushed
+# Run only when code is pushed to ci-cd branch
 on:
   push:
-    branches: [main]
+    branches:
+      - ci-cd
 
 jobs:
 
